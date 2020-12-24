@@ -1,4 +1,5 @@
 import pickle
+import catboost
 import sys
 import numpy as np
 from catboost import CatBoostRegressor
