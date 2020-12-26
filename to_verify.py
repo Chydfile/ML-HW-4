@@ -36,4 +36,4 @@ add_selectbox = st.sidebar.selectbox(
 col1,= st.beta_columns(1)
 with col1:
     st.header("Предсказание арендной стоимости жилья в Лондоне и близлежащих окрестностях на основании заданных критериев")
-    st.image("https://cdn.londonandpartners.com/-/media/images/london/business/tower-bridge-1920x580/towerbridgeheronew.jpg?mw=1920&hash=98F25194979A1578C5364EF0897462B0C5EF60B5")
+    st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg")
