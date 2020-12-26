@@ -5,7 +5,11 @@ import sys
 import numpy as np
 import pandas as pd
 from catboost import CatBoostRegressor
-st.title('My first app')
+st.title('Предсказание арендной стоимости жилья в Лондоне и близлежащих окрестностях на основании заданных критериев')
+
+col1,= st.beta_columns(1)
+with col1:
+    st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg")
 res = []
 with open('logisticRegr.pkl', 'rb') as f:
     model = pickle.load(f)
