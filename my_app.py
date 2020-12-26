@@ -31,7 +31,7 @@ with col2:
     london = st.number_input('Удаленность от центра Лондона, км', value = int(1), min_value = int(0), max_value = int(20))
     res.append(london)
 with col3:
-    distict = st.selectbox(
+    district = st.selectbox(
     "Район Лондона",
     ('Camden', 'Hackney', 'Islington', 'Tower Hamlets', 'Lewisham', 'Wandsworth',
     'Hammersmith and Fulham', 'Haringey', 'Southwark', 'Lambeth', 'Sutton',
