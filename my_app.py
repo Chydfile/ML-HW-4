@@ -38,5 +38,7 @@ st.write('Вы ввели', london)
 res.append(london)
 
 x_arr = np.array(res)
+st.write(res)
+st.write(x_arr)
 y = np.expm1(model.predict(x_arr))
 st.write(y)
