@@ -16,10 +16,10 @@ add_selectbox = st.sidebar.selectbox(
     ("Лондон",)
 )
 add_selectbox = st.sidebar.selectbox(
-    "Язык",
+    "*Язык",
     ("Русский",)
 )
-st.sidebar.write('*В демонстрационной версии доступен только 1 город - Лондон')
+st.sidebar.write('*В демонстрационной версии доступен только 1 город - Лондон и родной язык разработчика')
 col5, col6 = st.beta_columns(2)
 with col5:
     commodities = st.slider('Количество человек', 1, 10, 1)
