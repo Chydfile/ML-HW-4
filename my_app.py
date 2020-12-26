@@ -20,7 +20,7 @@ res.append(deposit)
 cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 50)
 res.append(cleaning)
 
-col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.beta_columns(3)
 with col1:
     number = st.number_input('Минимальное количество ночей', value = int(1), min_value = int(1), max_value = int(10))
     res.append(number)
@@ -39,6 +39,6 @@ with col3:
     'Bexley', 'Bromley')
     )
 res.append(district)
-x_arr = np.array(res).reshape(1, -1)
+x_arr = np.array(res)
 y = np.expm1(model.predict(x_arr))
 st.write('Стоимость жилья за ночь', y)
