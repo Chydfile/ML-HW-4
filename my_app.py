@@ -5,7 +5,7 @@ import sys
 import numpy as np
 import pandas as pd
 from catboost import CatBoostRegressor
-st.title('Предсказание арендной стоимости жилья в Лондоне на основании заданных критериев')
+st.title('Предсказание арендной стоимости жилья для арендодателя на основании заданных критериев')
 st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg")
 res = []
 with open('logisticRegr.pkl', 'rb') as f:
@@ -13,7 +13,7 @@ with open('logisticRegr.pkl', 'rb') as f:
 
 add_selectbox = st.sidebar.selectbox(
     "Название города",
-    ("London")
+    ("London",)
 )
 col5, col6 = st.beta_columns(2)
 with col5:
