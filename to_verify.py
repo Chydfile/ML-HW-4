@@ -37,10 +37,5 @@ add_selectbox = st.sidebar.selectbox(
 col1, col2, col3 = st.beta_columns(3)
 
 with col1:
-    st.header("A cat")
-    st.image("https://static.streamlit.io/examples/cat.jpg", use_column_width=True)
-with col2:
-    st.header("A dog")
-    st.image("https://static.streamlit.io/examples/dog.jpg", use_column_width=True)
-with col3:
-    st.image("https://static.streamlit.io/examples/owl.jpg", use_column_width=True)
+    st.header("London")
+    st.image("https://image.shutterstock.com/image-photo/aerial-panoramic-cityscape-view-london-260nw-551334580.jpg", use_column_width=True)
