@@ -15,6 +15,10 @@ add_selectbox = st.sidebar.selectbox(
     "*Название города",
     ("Лондон",)
 )
+add_selectbox = st.sidebar.selectbox(
+    "Язык",
+    ("Русский",)
+)
 st.sidebar.write('*В демонстрационной версии доступен только 1 город - Лондон')
 col5, col6 = st.beta_columns(2)
 with col5:
