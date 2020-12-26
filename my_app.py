@@ -31,13 +31,13 @@ res.append(london)
 
 district = st.sidebar.selectbox(
     "Район Лондона",
-    ('Camden' 'Hackney' 'Islington' 'Tower Hamlets' 'Lewisham' 'Wandsworth'
- 'Hammersmith and Fulham' 'Haringey' 'Southwark' 'Lambeth' 'Sutton'
- 'Brent' 'Enfield' 'Harrow' 'Barnet' 'Ealing' 'Newham' 'Hounslow'
- 'Redbridge' 'Kensington and Chelsea' 'Croydon' 'Greenwich' 'Westminster'
- 'Richmond upon Thames' 'Barking and Dagenham' 'Kingston upon Thames'
- 'City of London' 'Merton' 'Waltham Forest' 'Hillingdon' 'Havering'
- 'Bexley' 'Bromley')
+    ('Camden', 'Hackney', 'Islington', 'Tower Hamlets', 'Lewisham', 'Wandsworth',
+ 'Hammersmith and Fulham', 'Haringey', 'Southwark', 'Lambeth', 'Sutton',
+ 'Brent', 'Enfield', 'Harrow', 'Barnet', 'Ealing', 'Newham', 'Hounslow',
+ 'Redbridge', 'Kensington and Chelsea', 'Croydon', 'Greenwich', 'Westminster',
+ 'Richmond upon Thames', 'Barking and Dagenham', 'Kingston upon Thames',
+ 'City of London', 'Merton', 'Waltham Forest', 'Hillingdon', 'Havering',
+ 'Bexley', 'Bromley')
 )
 res.append(distric)
 x_arr = np.array(res).reshape(1, -1)
