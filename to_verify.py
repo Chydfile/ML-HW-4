@@ -27,3 +27,8 @@ st.write('The current movie title is', title)
 
 number = st.number_input('Insert a number')
 st.write('The current number is ', number)
+
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
