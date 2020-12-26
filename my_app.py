@@ -15,7 +15,7 @@ add_selectbox = st.sidebar.selectbox(
     "Название города",
     ("Лондон",)
 )
-st.sidebar.text('В демонстрационной версии доступен только 1 город - Лондон')
+st.sidebar.text('В демонстрационной версии '/n' доступен только 1 город - Лондон')
 col5, col6 = st.beta_columns(2)
 with col5:
     commodities = st.slider('Количество человек', 1, 10, 1)
@@ -36,11 +36,11 @@ with col1:
     number = st.number_input('Минимальное количество ночей', value = int(1), min_value = int(1), max_value = int(10))
     res.append(number)
 with col2:
-    london = st.number_input('Удаленность от центра Лондона, км', value = int(1), min_value = int(0), max_value = int(20))
+    london = st.number_input('Удаленность от центра, км', value = int(1), min_value = int(0), max_value = int(20))
     res.append(london)
 with col3:
     district = st.selectbox(
-    "Район Лондона",
+    "Район",
     ('Camden', 'Hackney', 'Islington', 'Tower Hamlets', 'Lewisham', 'Wandsworth',
     'Hammersmith and Fulham', 'Haringey', 'Southwark', 'Lambeth', 'Sutton',
     'Brent', 'Enfield', 'Harrow', 'Barnet', 'Ealing', 'Newham', 'Hounslow',
