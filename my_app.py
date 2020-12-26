@@ -9,7 +9,7 @@ st.title('Предсказание арендной стоимости жиль�
 
 col4 = st.beta_columns(1)
 with col4:
-    st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg", use_column_width=True)
+    st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg")
 res = []
 with open('logisticRegr.pkl', 'rb') as f:
     model = pickle.load(f)
