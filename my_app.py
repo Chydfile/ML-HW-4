@@ -11,6 +11,10 @@ res = []
 with open('logisticRegr.pkl', 'rb') as f:
     model = pickle.load(f)
 
+add_selectbox = st.sidebar.selectbox(
+    "Название города",
+    ("London")
+)
 col5, col6 = st.beta_columns(2)
 with col5:
     commodities = st.slider('Количество человек', 1, 10, 1)
