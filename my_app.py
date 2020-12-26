@@ -14,19 +14,16 @@ res = []
 with open('logisticRegr.pkl', 'rb') as f:
     model = pickle.load(f)
 
-commodities = st.slider('Количество человек', 0, 20, 1)
+commodities = st.slider('Количество человек', 1, 20, 1)
 res.append(commodities)
 
-deposit = st.slider('Депозит, фунты', 0, 4000, 100)
+deposit = st.slider('Депозит, фунты', 0, 1000, 100)
 res.append(deposit)
 
-cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 10)
+cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 50)
 res.append(cleaning)
 
-min_nights = st.slider('Минимальное количество ночей', 0, 500, 10)
-res.append(min_nights)
-
-number = st.number_input('Стоимость дополнительного человека, фунты')
+number = st.number_input('Минимальное количество ночей')
 st.write('The current number is ', number)
 res.append(number)
 
