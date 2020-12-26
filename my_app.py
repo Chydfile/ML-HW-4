@@ -24,23 +24,23 @@ cleaning = st.slider('Стоимость финальной уборки, фун
 res.append(cleaning)
 
 col1, col2, col3 = st.beta_columns(3)
-    with col1:
-        number = st.number_input('Минимальное количество ночей', value = int(1), min_value = int(1), max_value = int(10))
-        res.append(number)
-    with col2:
-        london = st.number_input('Удаленность от центра Лондона, км', value = int(1), min_value = int(0), max_value = int(20))
-        res.append(london)
-    with col3:
-        distict = selectbox(
-        "Район Лондона",
-        ('Camden', 'Hackney', 'Islington', 'Tower Hamlets', 'Lewisham', 'Wandsworth',
-    'Hammersmith and Fulham', 'Haringey', 'Southwark', 'Lambeth', 'Sutton',
-    'Brent', 'Enfield', 'Harrow', 'Barnet', 'Ealing', 'Newham', 'Hounslow',
-    'Redbridge', 'Kensington and Chelsea', 'Croydon', 'Greenwich', 'Westminster',
-    'Richmond upon Thames', 'Barking and Dagenham', 'Kingston upon Thames',
-    'City of London', 'Merton', 'Waltham Forest', 'Hillingdon', 'Havering',
-    'Bexley', 'Bromley')
-    )
+with col1:
+    number = st.number_input('Минимальное количество ночей', value = int(1), min_value = int(1), max_value = int(10))
+    res.append(number)
+with col2:
+    london = st.number_input('Удаленность от центра Лондона, км', value = int(1), min_value = int(0), max_value = int(20))
+    res.append(london)
+with col3:
+    distict = selectbox(
+    "Район Лондона",
+    ('Camden', 'Hackney', 'Islington', 'Tower Hamlets', 'Lewisham', 'Wandsworth',
+'Hammersmith and Fulham', 'Haringey', 'Southwark', 'Lambeth', 'Sutton',
+'Brent', 'Enfield', 'Harrow', 'Barnet', 'Ealing', 'Newham', 'Hounslow',
+'Redbridge', 'Kensington and Chelsea', 'Croydon', 'Greenwich', 'Westminster',
+'Richmond upon Thames', 'Barking and Dagenham', 'Kingston upon Thames',
+'City of London', 'Merton', 'Waltham Forest', 'Hillingdon', 'Havering',
+'Bexley', 'Bromley')
+)
 res.append(district)
 x_arr = np.array(res).reshape(1, -1)
 y = np.expm1(model.predict(x_arr))
