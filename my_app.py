@@ -24,11 +24,9 @@ cleaning = st.slider('Стоимость финальной уборки, фун
 res.append(cleaning)
 
 number = st.number_input('Минимальное количество ночей')
-st.write('The current number is ', number)
 res.append(number)
 
 london = st.number_input('Удаленность от центра Лондона, км')
-st.write('Вы ввели', london)
 res.append(london)
 
 x_arr = np.array(res).reshape(1, -1)
