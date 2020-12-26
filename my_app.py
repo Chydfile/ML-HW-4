@@ -37,7 +37,7 @@ london = st.number_input('Удаленность от центра Лондон�
 st.write('Вы ввели', london)
 res.append(london)
 
-x_arr = np.array(res)
+x_arr = np.array(res).reshape(1, -1)
 st.write(res)
 st.write(x_arr)
 y = np.expm1(model.predict(x_arr))
