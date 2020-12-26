@@ -17,3 +17,14 @@ res.append(st.text_area('name6'))
 x_arr = np.array(res)
 y = np.expm1(model.predict(x_arr))
 st.write(y)
+
+map_data = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=['lat', 'lon'])
+
+st.map(map_data)
+map_data = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=['lat', 'lon'])
+
+st.map(map_data)
