@@ -38,4 +38,4 @@ col1, col2, col3 = st.beta_columns(3)
 
 with col1:
     st.header("London")
-    st.image("https://image.shutterstock.com/image-photo/aerial-panoramic-cityscape-view-london-260nw-551334580.jpg", use_column_width=True)
+    st.image("https://i0.wp.com/verbalistseducation.com/wp-content/uploads/2014/04/london-video-in-high-resolution.jpg", use_column_width=True)
