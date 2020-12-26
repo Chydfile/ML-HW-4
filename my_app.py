@@ -26,9 +26,6 @@ res.append(cleaning)
 min_nights = st.slider('Минимальное количество ночей', 0, 500, 10)
 res.append(min_nights)
 
-extra_night = st.slider('Удаленность от центра Лондона в км', 0, 10, 1)
-res.append(extra_night)
-
 number = st.number_input('Стоимость дополнительного человека, фунты')
 st.write('The current number is ', number)
 res.append(number)
