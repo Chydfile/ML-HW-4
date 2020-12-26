@@ -31,10 +31,10 @@ with col6:
     "Тип помещения",
     ('Apartment', 'House', 'Condominium', 'Boat', 'Hostel')
     )
-deposit = st.slider('Депозит, фунты', 0, 1000, int(100))
+deposit = st.slider('Депозит, фунты', 0, 1000, 100,int(100))
 res.append(deposit)
 
-cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, int(50))
+cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 50, int(50))
 res.append(cleaning)
 
 col1, col2, col3 = st.beta_columns(3)
