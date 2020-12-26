@@ -11,8 +11,6 @@ res = []
 with open('logisticRegr.pkl', 'rb') as f:
     model = pickle.load(f)
 
-commodities = st.slider('Количество человек', 1, 10, 1)
-res.append(commodities)
 col5, col6 = st.beta_columns(2)
 with col5:
     commodities = st.slider('Количество человек', 1, 10, 1)
