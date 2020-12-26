@@ -13,8 +13,9 @@ with open('logisticRegr.pkl', 'rb') as f:
 
 add_selectbox = st.sidebar.selectbox(
     "Название города",
-    ("London",)
+    ("Лондон",)
 )
+add_selectbox.text('В демонстрационной версии доступен только 1 город - Лондон')
 col5, col6 = st.beta_columns(2)
 with col5:
     commodities = st.slider('Количество человек', 1, 10, 1)
