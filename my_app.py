@@ -13,23 +13,30 @@ with col1:
 res = []
 with open('logisticRegr.pkl', 'rb') as f:
     model = pickle.load(f)
-res.append(st.text_area('name1'))
-res.append(st.text_area('name2'))
-res.append(st.text_area('name3'))
-res.append(st.text_area('name4'))
-res.append(st.text_area('name5'))
-res.append(st.text_area('name6'))
+
+commodities = st.slider('Количество человек', 0, 20, 1)
+res.append(commodities)
+
+deposit = st.slider('Депозит, фунты', 0, 4000, 100)
+res.append(deposit)
+
+cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 10)
+res.append(cleaning)
+
+min_nights = st.slider('Минимальное количество ночей', 0, 500, 10)
+res.append(min_nights)
+
+extra_night = st.slider('Удаленность от центра Лондона в км', 0, 10, 1)
+res.append(extra_night)
+
+number = st.number_input('Стоимость дополнительного человека, фунты')
+st.write('The current number is ', number)
+res.append(number)
+
+london = st.number_input('Удаленность от центра Лондона, км')
+st.write('Вы ввели', london)
+res.append(london)
+
 x_arr = np.array(res)
 y = np.expm1(model.predict(x_arr))
 st.write(y)
-
-map_data = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
-
-st.map(map_data)
-map_data = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
-
-st.map(map_data)
