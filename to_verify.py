@@ -9,3 +9,7 @@ agree = st.checkbox('I agree')
 
 if agree:
     st.write('Great!')
+
+genre = st.radio(
+"What's your favorite movie genre",
+('Comedy', 'Drama', 'Documentary'))
