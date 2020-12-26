@@ -29,6 +29,11 @@ res.append(number)
 london = st.number_input('Удаленность от центра Лондона, км', value = int(1), min_value = int(0), max_value = int(20))
 res.append(london)
 
+district = st.sidebar.selectbox(
+    "Район Лондона",
+    ("Email", "Home phone", "Mobile phone")
+)
+
 x_arr = np.array(res).reshape(1, -1)
 y = np.expm1(model.predict(x_arr))
 st.write('Стоимость жилья за ночь', y)
