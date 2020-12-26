@@ -22,5 +22,8 @@ else:
 age = st.slider('How old are you?', 0, 130, 25)
 st.write("I'm ", age, 'years old')
 
-title = st.text_input(max_value(int),'Movie title', 'Life of Brian')
+title = st.text_input('Movie title', 'Life of Brian')
 st.write('The current movie title is', title)
+
+number = st.number_input('Insert a number')
+st.write('The current number is ', number)
