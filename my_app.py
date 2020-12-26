@@ -11,9 +11,17 @@ res = []
 with open('logisticRegr.pkl', 'rb') as f:
     model = pickle.load(f)
 
-commodities = st.slider('Количество человек', 1, 20, 1)
+commodities = st.slider('Количество человек', 1, 10, 1)
 res.append(commodities)
-
+col5, col6 = st.beta_columns(2)
+with col5:
+    commodities = st.slider('Количество человек', 1, 10, 1)
+    res.append(commodities)
+with col6:
+    district_type = st.selectbox(
+    "Тип помещения",
+    ('Apartment', 'House', 'Condominium', 'Boat', 'Hostel')
+    )
 deposit = st.slider('Депозит, фунты', 0, 1000, 100)
 res.append(deposit)
 
@@ -39,11 +47,6 @@ with col3:
     'Bexley', 'Bromley')
     )
 res.append(district)
-with col4:
-    district_type = st.selectbox(
-    "Тип помещения",
-    ('Apartment', 'House', 'Condominium', 'Boat', 'Hostel')
-    )
 res.append(district_type)
 x_arr = np.array(res)
 y = np.expm1(model.predict(x_arr))
