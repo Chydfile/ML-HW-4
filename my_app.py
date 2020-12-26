@@ -3,6 +3,7 @@ import catboost
 import streamlit as st
 import sys
 import numpy as np
+import pandas as pd
 from catboost import CatBoostRegressor
 st.title('My first app')
 res = []
