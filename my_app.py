@@ -39,7 +39,7 @@ district = st.sidebar.selectbox(
  'City of London' 'Merton' 'Waltham Forest' 'Hillingdon' 'Havering'
  'Bexley' 'Bromley')
 )
-
+res.append(distric)
 x_arr = np.array(res).reshape(1, -1)
 y = np.expm1(model.predict(x_arr))
 st.write('Стоимость жилья за ночь', y)
