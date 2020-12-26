@@ -7,8 +7,8 @@ import pandas as pd
 from catboost import CatBoostRegressor
 st.title('Предсказание арендной стоимости жилья в Лондоне и близлежащих окрестностях на основании заданных критериев')
 
-col= st.beta_columns(1)
-with col:
+col4 = st.beta_columns(1)
+with col4:
     st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg", use_column_width=True)
 res = []
 with open('logisticRegr.pkl', 'rb') as f:
