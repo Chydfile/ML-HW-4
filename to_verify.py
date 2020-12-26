@@ -34,5 +34,5 @@ add_selectbox = st.sidebar.selectbox(
 )
 
 
-st.header("London")
+st.header("Предсказание арендной стоимости жилья в Лондоне и близлежащих окрестностях на основании заданных критериев")
 st.image("https://i0.wp.com/verbalistseducation.com/wp-content/uploads/2014/04/london-video-in-high-resolution.jpg")
