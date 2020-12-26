@@ -5,7 +5,7 @@ import sys
 import numpy as np
 import pandas as pd
 from catboost import CatBoostRegressor
-st.title('Предсказание арендной стоимости жилья в Лондоне и близлежащих окрестностях на основании заданных критериев')
+st.title('Предсказание арендной стоимости жилья в Лондоне на основании заданных критериев')
 st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg")
 res = []
 with open('logisticRegr.pkl', 'rb') as f:
@@ -20,7 +20,7 @@ res.append(deposit)
 cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 50)
 res.append(cleaning)
 
-col1, col2, col3 = st.beta_columns(3)
+col2, col3 = st.beta_columns(3)
 with col1:
     number = st.number_input('Минимальное количество ночей', value = int(1), min_value = int(1), max_value = int(10))
     res.append(number)
