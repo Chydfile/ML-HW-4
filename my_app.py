@@ -7,8 +7,8 @@ import pandas as pd
 from catboost import CatBoostRegressor
 st.title('Предсказание арендной стоимости жилья в Лондоне и близлежащих окрестностях на основании заданных критериев')
 
-col1,= st.beta_columns(1)
-with col1:
+col= st.beta_columns(1)
+with col:
     st.image("https://s.wsj.net/public/resources/images/BN-IS945_london_G_20150603154805.jpg", use_column_width=True)
 res = []
 with open('logisticRegr.pkl', 'rb') as f:
@@ -23,22 +23,24 @@ res.append(deposit)
 cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 50)
 res.append(cleaning)
 
-number = st.number_input('Минимальное количество ночей', value = int(1), min_value = int(1), max_value = int(10))
-res.append(number)
-
-london = st.number_input('Удаленность от центра Лондона, км', value = int(1), min_value = int(0), max_value = int(20))
-res.append(london)
-
-district = st.sidebar.selectbox(
-    "Район Лондона",
-    ('Camden', 'Hackney', 'Islington', 'Tower Hamlets', 'Lewisham', 'Wandsworth',
- 'Hammersmith and Fulham', 'Haringey', 'Southwark', 'Lambeth', 'Sutton',
- 'Brent', 'Enfield', 'Harrow', 'Barnet', 'Ealing', 'Newham', 'Hounslow',
- 'Redbridge', 'Kensington and Chelsea', 'Croydon', 'Greenwich', 'Westminster',
- 'Richmond upon Thames', 'Barking and Dagenham', 'Kingston upon Thames',
- 'City of London', 'Merton', 'Waltham Forest', 'Hillingdon', 'Havering',
- 'Bexley', 'Bromley')
-)
+col1, col2, col3 = st.beta_columns(3)
+    with col1:
+        number = st.number_input('Минимальное количество ночей', value = int(1), min_value = int(1), max_value = int(10))
+        res.append(number)
+    with col2:
+        london = st.number_input('Удаленность от центра Лондона, км', value = int(1), min_value = int(0), max_value = int(20))
+        res.append(london)
+    with col3:
+        distict = selectbox(
+        "Район Лондона",
+        ('Camden', 'Hackney', 'Islington', 'Tower Hamlets', 'Lewisham', 'Wandsworth',
+    'Hammersmith and Fulham', 'Haringey', 'Southwark', 'Lambeth', 'Sutton',
+    'Brent', 'Enfield', 'Harrow', 'Barnet', 'Ealing', 'Newham', 'Hounslow',
+    'Redbridge', 'Kensington and Chelsea', 'Croydon', 'Greenwich', 'Westminster',
+    'Richmond upon Thames', 'Barking and Dagenham', 'Kingston upon Thames',
+    'City of London', 'Merton', 'Waltham Forest', 'Hillingdon', 'Havering',
+    'Bexley', 'Bromley')
+    )
 res.append(district)
 x_arr = np.array(res).reshape(1, -1)
 y = np.expm1(model.predict(x_arr))
