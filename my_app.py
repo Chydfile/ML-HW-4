@@ -23,10 +23,10 @@ res.append(deposit)
 cleaning = st.slider('Стоимость финальной уборки, фунты', 0, 500, 50)
 res.append(cleaning)
 
-number = st.number_input('Минимальное количество ночей')
+number = st.number_input('Минимальное количество ночей',max_value = 10)
 res.append(number)
 
-london = st.number_input('Удаленность от центра Лондона, км')
+london = st.number_input('Удаленность от центра Лондона, км',max_value = 20)
 res.append(london)
 
 x_arr = np.array(res).reshape(1, -1)
