@@ -13,13 +13,7 @@ with open('logisticRegr.pkl', 'rb') as f:
 
 commodities = st.slider('Количество человек', 1, 20, 1)
 res.append(commodities)
-col4, col5 = st.beta_columns(2)
-with col4:
-    number = st.number_input('Количество ванных комнат', value = int(1), min_value = int(1), max_value = int(10))
-    res.append(number)
-with col5:
-    london = st.number_input('Количество спален', value = int(1), min_value = int(0), max_value = int(20))
-    res.append(london)
+
 deposit = st.slider('Депозит, фунты', 0, 1000, 100)
 res.append(deposit)
 
